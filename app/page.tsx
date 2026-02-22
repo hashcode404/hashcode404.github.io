@@ -10,6 +10,16 @@ declare global {
   }
 }
 
+function Section({ children }: { children: React.ReactNode }) {
+  return (
+    <section className="h-screen snap-center flex items-center justify-center px-6">
+      <div className="w-full max-w-4xl">
+        {children}
+      </div>
+    </section>
+  );
+}
+
 
 
 
@@ -31,46 +41,50 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
-  if (loading) {
-    const totalBars = 30;
-    const filledBars = Math.floor((progress / 100) * totalBars);
-    const emptyBars = totalBars - filledBars;
-    return buildLoading(filledBars, emptyBars, progress)
-
-  }
+  // if (loading) {
+  //   const totalBars = 30;
+  //   const filledBars = Math.floor((progress / 100) * totalBars);
+  //   const emptyBars = totalBars - filledBars;
+  //   return buildLoading(filledBars, emptyBars, progress)
+  // }
 
   return (
-    <main className="relative min-h-screen flex items-center flex-col gap-15 justify-center bg-gray-950 text-white overflow-hidden">
-
+    <main className="relative bg-gray-950 text-white 
+    h-screen overflow-y-scroll 
+    snap-y snap-mandatory">
       {/* GRID BACKGROUND */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(150,150,150,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(150,150,150,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
       {/* INTRO CARD */}
-      {introCard()}
+      <Section>
+        {introCard()}
+      </Section>
       {/* SKILL CARD */}
 
-      {skillsCard()}
+      <Section>
+        {skillsCard()}
+      </Section>
       {/* EXPERIENCE CARD */}
 
-      {experienceCard()}
+      <Section>
+        {experienceCard()}
+      </Section>
       {/* PROJECTS CARD */}
 
-      {projectsCard()}
+      <Section>
+        {projectsCard()}
+      </Section>
 
       {/* CERTIFICATIONS CARD */}
 
-      {certificationsCard()}
+      <Section>
+        {certificationsCard()}
+      </Section>
 
       {/* CONTACT CARD */}
 
-      {contactCard()}
-
-
-
-
-
-
-
-
+      <Section>
+        {contactCard()}
+      </Section>
 
     </main>
   );

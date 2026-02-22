@@ -86,10 +86,17 @@ export default function Home() {
 
         <h1 className="text-5xl md:text-6xl font-mono font-bold text-white">
           Pranav P
+          <span className="animate-pulse text-green-500">_</span>
         </h1>
 
-        <p className="text-neutral-400 mt-2 mb-6">
+        <p className="text-neutral-400 mt-2 mb-4">
           senior-software-developer
+        </p>
+        <p className="text-neutral-400 mt-2 mb-6">
+          Flutter Developer with 3+ years of experience delivering
+          production-ready applications for multi-vendor platforms and
+          restaurant management systems. Specialized in scalable,
+          offline-first architectures and real-time system design.
         </p>
 
         {/* skills */}
@@ -100,10 +107,17 @@ export default function Home() {
             {["Flutter", "Dart", "Kotlin", "Swift", "Python"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"
+              >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -117,10 +131,16 @@ export default function Home() {
             {["Clean Architecture", "DDD", "MVC", "MVVM"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"           >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -134,10 +154,16 @@ export default function Home() {
             {["GetX", "Bloc", "Provider", "Riverpod"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"            >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -150,10 +176,16 @@ export default function Home() {
             {["Firebase Firestore", "Hive", "SQLite"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"            >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -164,13 +196,19 @@ export default function Home() {
         <div className="mt-8">
           <p className="text-green-400 mb-3">$ integrations</p>
           <div className="flex flex-wrap gap-3">
-            {["REST APIs", "Firebase", "Stripe", "Google Maps API", "Push Notifications"].map((item) => (
+            {["REST APIs", "Firebase", "Stripe", "In-App Purchases", "Google Maps API", "Google Business Profile API", "Push Notifications"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"            >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -184,11 +222,16 @@ export default function Home() {
             {["Git", "GitHub"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"
-              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"            >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -202,10 +245,16 @@ export default function Home() {
             {["GitHub Actions", "Fastlane"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"              >
+                className="px-3 py-1 rounded-md 
+                bg-black border border-green-700/40
+                text-neutral-200 text-sm font-mono
+
+                hover:bg-green-950 hover:border-green-400
+                hover:shadow-[0_0_10px_rgba(0,255,100,0.3)]
+                transition-all duration-300"            >
+                <span className="text-green-400 mr-2">
+                  &gt;_
+                </span>
                 {item}
               </span>
             ))}
@@ -295,8 +344,26 @@ export default function Home() {
         </div>
 
         <p className="text-green-400 mb-4">$ ls projects</p>
-
         {/* Project 1 */}
+        <div className="mb-10">
+          <h3 className="text-white text-lg font-semibold mb-2">
+            online-order-management-system
+          </h3>
+
+          <p className="text-neutral-400 text-sm mb-3">
+            Flutter · Firebase · REST API · GetX · Push Notifications
+          </p>
+
+          <ul className="text-neutral-300 text-sm space-y-1">
+            <li>• Centralized dashboard for managing website & app orders</li>
+            <li>• Accept / Reject / Complete order workflow</li>
+            <li>• Real-time alert system for new incoming orders</li>
+            {/* <li>• Prevented missed orders through sound & push notifications</li> */}
+            <li>• Reduced manual coordination between staff by 40%</li>
+          </ul>
+        </div>
+
+        {/* Project 2 */}
         <div className="mb-10">
           <h3 className="text-white text-lg font-semibold mb-2">
             multi-vendor-food-platform
@@ -314,7 +381,7 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* Project 2 */}
+        {/* Project 3 */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-2">
             offline-pos-waiter-system
@@ -416,13 +483,13 @@ export default function Home() {
           <MapPin size={16} className="text-green-500" />
           <span>Thiruvananthapuram, Kerala, India</span>
         </div>
-        <p className="text-green-400 mb-2">$ contact --email</p>
+        <p className="text-green-400 mb-4">$ contact --email</p>
         <a
           href="mailto:pranavps962@gmail.com"
           onClick={() => trackEvent("click", "email")}
-          className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+          className="inline-flex items-center gap-2 px-4 py-2 border border-green-800/40 rounded-lg 
      hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-     hover:-translate-y-1 hover:scale-105 
+     hover:-translate-y-1 hover:border-green-400 hover:shadow-[0_0_10px_rgba(0,255,100,0.4)]
      transition-all duration-300 ease-in-out"
         >
           <Mail size={16} />
@@ -434,9 +501,9 @@ export default function Home() {
           href="/Pranav P.pdf"
           download
           onClick={() => trackEvent("download", "resume")}
-          className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+          className="inline-flex items-center gap-2 px-4 py-2 border border-green-800/40 rounded-lg 
      hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-     hover:-translate-y-1 hover:scale-105 
+     hover:-translate-y-1 hover:border-green-400 hover:shadow-[0_0_10px_rgba(0,255,100,0.4)]
      transition-all duration-300 ease-in-out"
         >
           <Download size={16} />
@@ -450,9 +517,9 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click", "github")}
-            className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+            className="inline-flex items-center gap-2 px-4 py-2 border border-green-800/40 rounded-lg 
        hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-       hover:-translate-y-1 hover:scale-105 
+       hover:-translate-y-1 hover:border-green-400 hover:shadow-[0_0_10px_rgba(0,255,100,0.4)]
        transition-all duration-300 ease-in-out"
           >
             <Github size={16} />
@@ -464,9 +531,9 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click", "linkedin")}
-            className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+            className="inline-flex items-center gap-2 px-4 py-2 border border-green-800/40  rounded-lg 
        hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-       hover:-translate-y-1 hover:scale-105 
+       hover:-translate-y-1 hover:border-green-400 hover:shadow-[0_0_10px_rgba(0,255,100,0.4)]
        transition-all duration-300 ease-in-out"
           >
             <Linkedin size={16} />
@@ -478,9 +545,9 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click", "instagram")}
-            className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+            className="inline-flex items-center gap-2 px-4 py-2 border border-green-800/40 rounded-lg 
        hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-       hover:-translate-y-1 hover:scale-105 
+       hover:-translate-y-1 hover:border-green-400 hover:shadow-[0_0_10px_rgba(0,255,100,0.4)]
        transition-all duration-300 ease-in-out"
           >
             <Instagram size={16} />

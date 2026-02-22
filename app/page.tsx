@@ -156,6 +156,72 @@ export default function Home() {
 
       </motion.div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 bg-neutral-950 border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+      >
+        {/* Terminal Header */}
+        <div className="flex items-center gap-2 mb-6">
+          <div className="w-3 h-3 rounded-full bg-red-500" />
+          <div className="w-3 h-3 rounded-full bg-yellow-500" />
+          <div className="w-3 h-3 rounded-full bg-green-500" />
+        </div>
+
+        <p className="text-green-400 mb-6">$ ls experience</p>
+
+        {/* Company 1 */}
+        <div className="mb-10">
+          <h3 className="text-white text-lg font-semibold">
+            senior-software-developer (flutter)
+          </h3>
+          <p className="text-neutral-400 text-sm mb-3">
+            Ferns IT Solutions · Dec 2022 – Present · Kerala, India
+          </p>
+
+          <ul className="text-neutral-300 text-sm space-y-2">
+            <li>• Delivered 8+ production mobile apps serving 5,000+ users</li>
+            <li>• Built multi-vendor food platform (100+ restaurants, 30% higher order completion)</li>
+            <li>• Engineered offline POS system with 100% uptime during outages</li>
+            <li>• Reduced API response time from 2.5s → 1.2s</li>
+            <li>• Integrated Stripe, Google Maps API & Google Business Profile API</li>
+          </ul>
+        </div>
+
+        {/* Company 2 */}
+        <div className="mb-10">
+          <h3 className="text-white text-lg font-semibold">
+            software-development-intern (flutter, kotlin)
+          </h3>
+          <p className="text-neutral-400 text-sm mb-3">
+            RichkenMedia · Mar 2022 – Nov 2022
+          </p>
+
+          <ul className="text-neutral-300 text-sm space-y-2">
+            <li>• Worked on content streaming application</li>
+            <li>• Applied DDD architecture & Bloc state management</li>
+            <li>• Assisted in backend API integration & debugging</li>
+          </ul>
+        </div>
+
+        {/* Company 3 */}
+        <div>
+          <h3 className="text-white text-lg font-semibold">
+            fullstack-development-intern (python)
+          </h3>
+          <p className="text-neutral-400 text-sm mb-3">
+            Quest Innovative Solutions · Oct 2021 – Nov 2022
+          </p>
+
+          <ul className="text-neutral-300 text-sm space-y-2">
+            <li>• Built full-stack web features using Python</li>
+            <li>• Learned SDLC, version control & team collaboration</li>
+          </ul>
+        </div>
+      </motion.div>
+
       {/* PROJECTS CARD */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -170,7 +236,7 @@ export default function Home() {
           <div className="w-3 h-3 rounded-full bg-green-500" />
         </div>
 
-        <p className="text-green-400 mb-4">$ projects</p>
+        <p className="text-green-400 mb-4">$ ls projects</p>
 
         {/* Project 1 */}
         <div className="mb-10">
@@ -208,6 +274,65 @@ export default function Home() {
           </ul>
         </div>
       </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 bg-neutral-950 border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+      >
+        {/* Terminal Header */}
+        <div className="flex items-center gap-2 mb-6">
+          <div className="w-3 h-3 rounded-full bg-red-500" />
+          <div className="w-3 h-3 rounded-full bg-yellow-500" />
+          <div className="w-3 h-3 rounded-full bg-green-500" />
+        </div>
+
+        <p className="text-green-400 mb-4">$ ls certifications</p>
+
+        <div className="space-y-8">
+
+          {/* Cert 1 */}
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-1">
+              foundations-of-cybersecurity
+            </h3>
+            <p className="text-neutral-400 text-sm mb-2">
+              Google · Issued Oct 2025
+            </p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/VD8VV4BBPBWF"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-green-400 text-sm hover:underline mb-4"
+            >
+              view-credential →
+            </a>
+          </div>
+
+          {/* Cert 2 */}
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-1 ">
+              build-website-with-wordpress
+            </h3>
+            <p className="text-neutral-400 text-sm mb-2">
+              Coursera Project Network · Issued Jul 2024
+            </p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/VXHJCURTMUAC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-green-400 text-sm hover:underline"
+            >
+              view-credential →
+            </a>
+          </div>
+
+        </div>
+      </motion.div>
+
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

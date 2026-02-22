@@ -42,8 +42,10 @@ export default function Home() {
             {["Flutter", "Dart", "Kotlin", "Swift", "Python"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 text-sm border border-green-700 text-white rounded-lg bg-green-900/20 hover:bg-green-900/40 transition"
-              >
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"              >
                 {item}
               </span>
             ))}
@@ -57,8 +59,10 @@ export default function Home() {
             {["Clean Architecture", "DDD", "MVC", "MVVM"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 text-sm border border-green-700 text-white rounded-lg bg-green-900/20 hover:bg-green-900/40 transition"
-              >
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"              >
                 {item}
               </span>
             ))}
@@ -72,8 +76,26 @@ export default function Home() {
             {["GetX", "Bloc", "Provider", "Riverpod"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 text-sm border border-green-700 text-white rounded-lg bg-green-900/20 hover:bg-green-900/40 transition"
-              >
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* DATABASE */}
+        <div className="mt-8">
+          <p className="text-green-400 mb-3">$ database</p>
+          <div className="flex flex-wrap gap-3">
+            {["Firebase Firestore", "Hive", "SQLite"].map((item) => (
+              <span
+                key={item}
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"              >
                 {item}
               </span>
             ))}
@@ -84,11 +106,13 @@ export default function Home() {
         <div className="mt-8">
           <p className="text-green-400 mb-3">$ integrations</p>
           <div className="flex flex-wrap gap-3">
-            {["REST APIs", "Firebase", "Stripe", "Google Maps API"].map((item) => (
+            {["REST APIs", "Firebase", "Stripe", "Google Maps API", "Push Notifications"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 text-sm border border-green-700 text-white rounded-lg bg-green-900/20 hover:bg-green-900/40 transition"
-              >
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"              >
                 {item}
               </span>
             ))}
@@ -102,7 +126,10 @@ export default function Home() {
             {["Git", "GitHub"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 text-sm border border-green-700 text-white rounded-lg bg-green-900/20 hover:bg-green-900/40 transition"
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"
               >
                 {item}
               </span>
@@ -114,11 +141,13 @@ export default function Home() {
         <div className="mt-8">
           <p className="text-green-400 mb-3">$ ci-cd</p>
           <div className="flex flex-wrap gap-3">
-            {["GitHub Actions", "Fastlane", "Firebase App Distribution"].map((item) => (
+            {["GitHub Actions", "Fastlane"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 text-sm border border-green-700 text-white rounded-lg bg-green-900/20 hover:bg-green-900/40 transition"
-              >
+                className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"              >
                 {item}
               </span>
             ))}
@@ -130,10 +159,9 @@ export default function Home() {
       {/* PROJECTS CARD */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-[#0b0f0c] border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+        className="relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
       >
         {/* Terminal Header */}
         <div className="flex items-center gap-2 mb-6">
@@ -185,7 +213,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="bg-[#0b0f0c] border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+        className="relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
       >
         {/* Terminal Header */}
         <div className="flex items-center gap-2 mb-6">
@@ -207,27 +235,36 @@ export default function Home() {
         <p className="text-green-400 mb-2">$ contact --email</p>
         <a
           href="mailto:pranavps962@gmail.com"
-          className="inline-block px-4 py-2 bg-green-900/20 border border-green-700 text-white rounded-lg hover:bg-green-900/40 transition mb-6"
-        >
+          className="inline-block px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+             hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+             hover:-translate-y-1 hover:scale-105 
+             transition-all duration-300 ease-in-out"        >
           pranavps962@gmail.com
         </a>
 
-        <p className="text-green-400 mb-2">$ cat resume.pdf</p>
+        <p className="text-green-400 mb-4 mt-8">$ cat resume.pdf</p>
         <a
-          href="/public/Pranav P.pdf"
+          href="/Pranav P.pdf"
           target="_blank"
-          className="inline-block px-4 py-2 bg-green-900/20 border border-green-700 text-white rounded-lg hover:bg-green-900/40 transition mb-6"
+          rel="noopener noreferrer"
+          className="inline-block px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+             hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+             hover:-translate-y-1 hover:scale-105 
+             transition-all duration-300 ease-in-out"
         >
           Download Resume
         </a>
 
-        <p className="text-green-400 mb-4">$ ls ./social-links</p>
-
+        <p className="text-green-400 mb-4 mt-8">$ ls ./social-links</p>
         <div className="flex flex-wrap gap-4">
           <a
             href="https://github.com/hashcode404"
             target="_blank"
-            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg hover:bg-green-900/40 transition"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"
           >
             GitHub
           </a>
@@ -235,7 +272,11 @@ export default function Home() {
           <a
             href="https://www.linkedin.com/in/pranav-p-a882331b3/"
             target="_blank"
-            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg hover:bg-green-900/40 transition"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"
           >
             LinkedIn
           </a>
@@ -243,7 +284,11 @@ export default function Home() {
           <a
             href="https://www.instagram.com/hashcode.404"
             target="_blank"
-            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg hover:bg-green-900/40 transition"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+               hover:-translate-y-1 hover:scale-105 
+               transition-all duration-300 ease-in-out"
           >
             Instagram
           </a>

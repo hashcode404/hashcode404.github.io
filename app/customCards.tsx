@@ -1,6 +1,9 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Download, Github, Linkedin, Instagram, MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
+import TerminalCommand from "./terminalCommand";
+
 
 const trackEvent = (action: string, label: string) => {
     if (typeof window !== "undefined" && window.gtag) {
@@ -10,6 +13,7 @@ const trackEvent = (action: string, label: string) => {
         });
     }
 };
+
 
 const terminalBadgeStyles = `
   px-3 py-1 rounded-md
@@ -26,6 +30,9 @@ hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30
 hover:-translate-y-1 hover:border-green-400 hover:shadow-[0_0_10px_rgba(0,255,100,0.4)]
 transition-all duration-300 ease-in-out
 `;
+
+
+
 
 export function buildLoading(filledBars: number, emptyBars: number, progress: number) {
     return (
@@ -48,11 +55,14 @@ export function buildLoading(filledBars: number, emptyBars: number, progress: nu
 }
 
 export function introCard() {
+    const [showContent, setShowContent] = useState(false);
+
+
     return <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+        className=" relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-full max-w-3xl   p-8 font-mono"
     >
 
         {/* Terminal Header */}
@@ -63,26 +73,41 @@ export function introCard() {
         </div>
 
         {/* whoami */}
-        <p className="text-green-400 mb-2">$ whoami</p>
+        <TerminalCommand
+            text="$ whoami"
+            speed={60}
+            onComplete={() => setTimeout(() => setShowContent(true), 400)}
+        />
 
-        <h1 className="text-5xl md:text-6xl font-mono font-bold text-white">
-            Pranav P
-            <span className="animate-pulse text-green-500">_</span>
-        </h1>
+        {showContent && (
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+            >
+                <h1 className="text-5xl md:text-6xl font-mono font-bold text-white">
+                    Pranav P
+                    {/* <span className="animate-pulse text-green-500">_</span> */}
+                </h1>
 
-        <p className="text-neutral-400 mt-2 mb-4">
-            senior-software-developer
-        </p>
-        <p className="text-neutral-400 mt-2 mb-6">
-            Flutter Developer with 3+ years of experience delivering
-            production-ready applications for multi-vendor platforms and
-            restaurant management systems. Specialized in scalable,
-            offline-first architectures and real-time system design.
-        </p>
+                <p className="text-neutral-400 mt-2 mb-4">
+                    senior-software-developer
+                </p>
+
+                <p className="text-neutral-400 mt-2 mb-6">
+                    Flutter Developer with 3+ years of experience delivering
+                    production-ready applications for multi-vendor platforms and
+                    restaurant management systems. Specialized in scalable,
+                    offline-first architectures and real-time system design.
+                </p>
+            </motion.div>
+        )}
     </motion.div>
 }
 
 export function skillsCard() {
+    const [showContent, setShowContent] = useState(false);
+
     return <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,138 +125,159 @@ export function skillsCard() {
 
         {/* skills */}
         <div className="px-8 pb-8 overflow-y-auto flex-1">
+            <TerminalCommand
+                text="$ ls technical-skills --all"
+                speed={60}
+                onComplete={() => setTimeout(() => setShowContent(true), 400)}
+            />
 
 
-            {/* LANGUAGES */}
-            <div>
-                <p className="text-green-400 mb-3">$ languages</p>
-                <div className="flex flex-wrap gap-3">
-                    {["Flutter", "Dart", "Kotlin", "Swift", "Python"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
-                            </span>
-                            {item}
-                        </span>
-                    ))}
-                </div>
-            </div>
 
-            {/* ARCHITECTURE */}
-            <div className="mt-8">
-                <p className="text-green-400 mb-3">$ architecture</p>
-                <div className="flex flex-wrap gap-3">
-                    {["Clean Architecture", "DDD", "MVC", "MVVM"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
-                            </span>
-                            {item}
-                        </span>
-                    ))}
-                </div>
-            </div>
+            {showContent && (<motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+            >
+                {/* LANGUAGES */}
+                <h2 className="text-3xl font-bold text-white mb-6">
+                    Technical Skills
+                </h2>
 
-            {/* STATE MANAGEMENT */}
-            <div className="mt-8">
-                <p className="text-green-400 mb-3">$ state-management</p>
-                <div className="flex flex-wrap gap-3">
-                    {["GetX", "Bloc", "Provider", "Riverpod"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
+                <div>
+                    <p className="text-green-400 mb-3">$ languages</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["Flutter", "Dart", "Kotlin", "Swift", "Python"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
                             </span>
-                            {item}
-                        </span>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-            {/* DATABASE */}
-            <div className="mt-8">
-                <p className="text-green-400 mb-3">$ database</p>
-                <div className="flex flex-wrap gap-3">
-                    {["Firebase Firestore", "Hive", "SQLite"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
-                            </span>
-                            {item}
-                        </span>
-                    ))}
-                </div>
-            </div>
 
-            {/* INTEGRATIONS */}
-            <div className="mt-8">
-                <p className="text-green-400 mb-3">$ integrations</p>
-                <div className="flex flex-wrap gap-3">
-                    {["REST APIs", "Firebase", "Stripe", "In-App Purchases", "Google Maps API", "Google Business Profile API", "Push Notifications"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
+                {/* ARCHITECTURE */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ architecture</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["Clean Architecture", "DDD", "MVC", "MVVM"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
                             </span>
-                            {item}
-                        </span>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            {/* VERSION CONTROL */}
-            <div className="mt-8">
-                <p className="text-green-400 mb-3">$ version-control</p>
-                <div className="flex flex-wrap gap-3">
-                    {["Git", "GitHub"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
+                {/* STATE MANAGEMENT */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ state-management</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["GetX", "Bloc", "Provider", "Riverpod"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
                             </span>
-                            {item}
-                        </span>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+                {/* DATABASE */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ database</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["Firebase Firestore", "Hive", "SQLite"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
 
-            {/* CI/CD */}
-            <div className="mt-8">
-                <p className="text-green-400 mb-3">$ ci-cd</p>
-                <div className="flex flex-wrap gap-3">
-                    {["GitHub Actions", "Fastlane"].map((item) => (
-                        <span
-                            key={item}
-                            className={terminalBadgeStyles}
-                        >
-                            <span className="text-green-400 mr-2">
-                                &gt;_
+                {/* INTEGRATIONS */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ integrations</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["REST APIs", "Firebase", "Stripe", "In-App Purchases", "Google Maps API", "Google Business Profile API", "Push Notifications"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
                             </span>
-                            {item}
-                        </span>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+
+                {/* VERSION CONTROL */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ version-control</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["Git", "GitHub"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* CI/CD */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ ci-cd</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["GitHub Actions", "Fastlane"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+            </motion.div>
+            )}
+
         </div>
 
-    </motion.div>
+    </motion.div >
 }
 
 export function experienceCard() {
+    const [showContent, setShowContent] = useState(false);
+
     return <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -247,8 +293,18 @@ export function experienceCard() {
             <div className="w-3 h-3 rounded-full bg-green-500" />
         </div>
 
-        <p className="text-green-400 mb-6 px-8">$ ls experience</p>
-        <div className="px-8 pb-8 overflow-y-auto flex-1">
+       
+            <div className="px-8 pb-8 overflow-y-auto flex-1">
+            <TerminalCommand
+                text="$ ls experience --all"
+                speed={60}
+                onComplete={() => setTimeout(() => setShowContent(true), 400)}
+            />
+            {showContent && (<motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+            >
 
             {/* Company 1 */}
             <div className="mb-10">
@@ -256,7 +312,7 @@ export function experienceCard() {
                     senior-software-developer (flutter)
                 </h3>
                 <p className="text-neutral-400 text-sm mb-3">
-                    Ferns IT Solutions · Dec 2022 – Present · Kerala, India
+                    Ferns IT Solutions · Dec 2022 - Present · Kerala, India
                 </p>
 
                 <ul className="text-neutral-300 text-sm space-y-2">
@@ -274,7 +330,7 @@ export function experienceCard() {
                     software-development-intern (flutter, kotlin)
                 </h3>
                 <p className="text-neutral-400 text-sm mb-3">
-                    RichkenMedia · Mar 2022 – Nov 2022
+                    RichkenMedia · Mar 2022 - Nov 2022
                 </p>
 
                 <ul className="text-neutral-300 text-sm space-y-2">
@@ -298,90 +354,111 @@ export function experienceCard() {
                     <li>• Learned SDLC, version control & team collaboration</li>
                 </ul>
             </div>
+            </motion.div>
+            )}
         </div>
     </motion.div>
 }
 
 export function projectsCard() {
+    const [showContent, setShowContent] = useState(false);
+
     return <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+        className="relative z-10 bg-neutral-950 border border-green-900/40 rounded-xl shadow-2xl 
+        w-full max-w-3xl h-[85vh] flex flex-col font-mono"
     >
         {/* Terminal Header */}
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 p-8 pb-4 shrink-0">
             <div className="w-3 h-3 rounded-full bg-red-500" />
             <div className="w-3 h-3 rounded-full bg-yellow-500" />
             <div className="w-3 h-3 rounded-full bg-green-500" />
         </div>
 
-        <p className="text-green-400 mb-4">$ ls projects</p>
-        {/* Project 1 */}
-        <div className="mb-10">
-            <h3 className="text-white text-lg font-semibold mb-2">
-                online-order-management-system
-            </h3>
+        <div className="px-8 pb-8 overflow-y-auto flex-1">
+                <TerminalCommand
+                text="$ ls projects --all"
+                speed={60}
+                onComplete={() => setTimeout(() => setShowContent(true), 400)}
+            />
+            {showContent && (<motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+            > 
 
-            <p className="text-neutral-400 text-sm mb-3">
-                Flutter · Firebase · REST API · GetX · Push Notifications
-            </p>
+            {/* Project 1 */}
+            <div className="mb-10">
+                <h3 className="text-white text-lg font-semibold mb-2">
+                    online-order-management-system
+                </h3>
 
-            <ul className="text-neutral-300 text-sm space-y-1">
-                <li>• Centralized dashboard for managing website & app orders</li>
-                <li>• Accept / Reject / Complete order workflow</li>
-                <li>• Real-time alert system for new incoming orders</li>
-                {/* <li>• Prevented missed orders through sound & push notifications</li> */}
-                <li>• Reduced manual coordination between staff by 40%</li>
-            </ul>
-        </div>
+                <p className="text-neutral-400 text-sm mb-3">
+                    Flutter · Firebase · REST API · GetX · Push Notifications
+                </p>
 
-        {/* Project 2 */}
-        <div className="mb-10">
-            <h3 className="text-white text-lg font-semibold mb-2">
-                multi-vendor-food-platform
-            </h3>
+                <ul className="text-neutral-300 text-sm space-y-1">
+                    <li>• Centralized dashboard for managing website & app orders</li>
+                    <li>• Accept / Reject / Complete order workflow</li>
+                    <li>• Real-time alert system for new incoming orders</li>
+                    {/* <li>• Prevented missed orders through sound & push notifications</li> */}
+                    <li>• Reduced manual coordination between staff by 40%</li>
+                </ul>
+            </div>
 
-            <p className="text-neutral-400 text-sm mb-3">
-                Flutter · Firebase · GetX · Stripe
-            </p>
+            {/* Project 2 */}
+            <div className="mb-10">
+                <h3 className="text-white text-lg font-semibold mb-2">
+                    multi-vendor-food-platform
+                </h3>
 
-            <ul className="text-neutral-300 text-sm space-y-1">
-                <li>• 5,000+ active users</li>
-                <li>• 99.9% Stripe transaction success</li>
-                <li>• Real-time tracking & push notifications</li>
-                <li>• 30% increase in order completion</li>
-            </ul>
-        </div>
+                <p className="text-neutral-400 text-sm mb-3">
+                    Flutter · Firebase · GetX · Stripe
+                </p>
 
-        {/* Project 3 */}
-        <div>
-            <h3 className="text-white text-lg font-semibold mb-2">
-                offline-pos-waiter-system
-            </h3>
+                <ul className="text-neutral-300 text-sm space-y-1">
+                    <li>• 5,000+ active users</li>
+                    <li>• 99.9% Stripe transaction success</li>
+                    <li>• Real-time tracking & push notifications</li>
+                    <li>• 30% increase in order completion</li>
+                </ul>
+            </div>
 
-            <p className="text-neutral-400 text-sm mb-3">
-                Flutter · Hive · Local Networking
-            </p>
+            {/* Project 3 */}
+            <div>
+                <h3 className="text-white text-lg font-semibold mb-2">
+                    offline-pos-waiter-system
+                </h3>
 
-            <ul className="text-neutral-300 text-sm space-y-1">
-                <li>• Offline-first architecture</li>
-                <li>• 100% uptime during outages</li>
-                <li>• QR-based device pairing</li>
-                <li>• Deployed across 10+ restaurants</li>
-            </ul>
+                <p className="text-neutral-400 text-sm mb-3">
+                    Flutter · Hive · Local Networking
+                </p>
+
+                <ul className="text-neutral-300 text-sm space-y-1">
+                    <li>• Offline-first architecture</li>
+                    <li>• 100% uptime during outages</li>
+                    <li>• QR-based device pairing</li>
+                    <li>• Deployed across 10+ restaurants</li>
+                </ul>
+            </div>
+            </motion.div>
+            )}
         </div>
     </motion.div>
 
 }
 
 export function certificationsCard() {
+    const [showContent, setShowContent] = useState(false);
+
     return <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 bg-neutral-950 border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+        className="relative z-10 bg-neutral-950 border border-green-900/40 rounded-xl shadow-2xl w-full max-w-3xl  p-8 font-mono"
     >
         {/* Terminal Header */}
         <div className="flex items-center gap-2 mb-6">
@@ -390,7 +467,16 @@ export function certificationsCard() {
             <div className="w-3 h-3 rounded-full bg-green-500" />
         </div>
 
-        <p className="text-green-400 mb-4">$ ls certifications</p>
+        <TerminalCommand
+                text="$ ls certifications --all"
+                speed={60}
+                onComplete={() => setTimeout(() => setShowContent(true), 400)}
+            />
+            {showContent && (<motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+            > 
 
         <div className="space-y-8">
 
@@ -431,16 +517,20 @@ export function certificationsCard() {
             </div>
 
         </div>
+        </motion.div>
+            )}
     </motion.div>
 }
 
 export function contactCard() {
+    const [showContent, setShowContent] = useState(false);
+
     return <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-[90%] max-w-3xl p-8 font-mono"
+        className="relative z-10 bg-neutral-950  border border-green-900/40 rounded-xl shadow-2xl w-full max-w-3xl  p-8 font-mono"
     >
         {/* Terminal Header */}
         <div className="flex items-center gap-2 mb-6">
@@ -450,17 +540,28 @@ export function contactCard() {
         </div>
 
         {/* contact info */}
-        <p className="text-green-400 mb-2 mt-8">$ contact --info</p>
+        <TerminalCommand
+                text="$ contact --info"
+                speed={60}
+                onComplete={() => setTimeout(() => setShowContent(true), 400)}
+            />
+            {showContent && (<motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+            > 
+
+
         <h2 className="text-3xl font-bold text-white mb-6">
             Let's Connect
         </h2>
 
-        <p className="text-green-400 mb-2">$ location --current</p>
+        <p className="text-green-400 mb-4">$ location --current</p>
         <div className="flex items-center gap-2 text-neutral-300 mb-6">
-            <MapPin size={16} className="text-green-500" />
+            <MapPin size={16} className="text-white-500" />
             <span>Thiruvananthapuram, Kerala, India</span>
         </div>
-        <p className="text-green-400 mb-4">$ contact --email</p>
+        <p className="text-green-400 mb-4 mt-8">$ contact --email</p>
         <a
             href="mailto:pranavps962@gmail.com"
             onClick={() => trackEvent("click", "email")}
@@ -516,5 +617,7 @@ export function contactCard() {
                 Instagram
             </a>
         </div>
+        </motion.div>
+            )}
     </motion.div>
 }

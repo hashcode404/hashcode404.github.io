@@ -10,6 +10,8 @@ declare global {
   }
 }
 
+
+
 function Section({ children }: { children: React.ReactNode }) {
   return (
     <section className="h-screen snap-center flex items-center justify-center px-6">

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Pranav | Flutter Developer",
   description: "Portfolio of Pranav P",
   icons: {
-    icon: "/favicon.png",
+    icon: "/icon.svg",
   },
 };
 

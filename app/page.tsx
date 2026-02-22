@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { buildLoading, introCard, skillsCard, experienceCard, projectsCard, certificationsCard, contactCard } from "./customCards";
+import { LoadingScreen, IntroCard, SkillsCard, ExperienceCard, ProjectsCard, CertificationsCard, ContactCard } from "./customCards";
 
 
 declare global {
@@ -43,12 +43,12 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
-  // if (loading) {
-  //   const totalBars = 30;
-  //   const filledBars = Math.floor((progress / 100) * totalBars);
-  //   const emptyBars = totalBars - filledBars;
-  //   return buildLoading(filledBars, emptyBars, progress)
-  // }
+  if (loading) {
+    const totalBars = 30;
+    const filledBars = Math.floor((progress / 100) * totalBars);
+    const emptyBars = totalBars - filledBars;
+    return LoadingScreen(filledBars, emptyBars, progress)
+  }
 
   return (
     <main className="relative bg-gray-950 text-white 
@@ -58,34 +58,34 @@ export default function Home() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(150,150,150,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(150,150,150,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
       {/* INTRO CARD */}
       <Section>
-        {introCard()}
+        <IntroCard />
       </Section>
       {/* SKILL CARD */}
 
       <Section>
-        {skillsCard()}
+        <SkillsCard />
       </Section>
       {/* EXPERIENCE CARD */}
 
       <Section>
-        {experienceCard()}
+        <ExperienceCard />
       </Section>
       {/* PROJECTS CARD */}
 
       <Section>
-        {projectsCard()}
+        <ProjectsCard />
       </Section>
 
       {/* CERTIFICATIONS CARD */}
 
       <Section>
-        {certificationsCard()}
+        <CertificationsCard />
       </Section>
 
       {/* CONTACT CARD */}
 
       <Section>
-        {contactCard()}
+        <ContactCard />
       </Section>
 
     </main>

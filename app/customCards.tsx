@@ -34,7 +34,7 @@ transition-all duration-300 ease-in-out
 
 
 
-export function buildLoading(filledBars: number, emptyBars: number, progress: number) {
+export function LoadingScreen(filledBars: number, emptyBars: number, progress: number) {
     return (
         <div className="fixed inset-0 bg-black text-green-500 flex items-center justify-center font-mono text-lg">
             <div className="w-full max-w-xl px-4">
@@ -54,7 +54,7 @@ export function buildLoading(filledBars: number, emptyBars: number, progress: nu
     );
 }
 
-export function introCard() {
+export function IntroCard() {
     const [showContent, setShowContent] = useState(false);
 
 
@@ -105,7 +105,7 @@ export function introCard() {
     </motion.div>
 }
 
-export function skillsCard() {
+export function SkillsCard() {
     const [showContent, setShowContent] = useState(false);
 
     return <motion.div
@@ -275,7 +275,7 @@ export function skillsCard() {
     </motion.div >
 }
 
-export function experienceCard() {
+export function ExperienceCard() {
     const [showContent, setShowContent] = useState(false);
 
     return <motion.div
@@ -360,7 +360,7 @@ export function experienceCard() {
     </motion.div>
 }
 
-export function projectsCard() {
+export function ProjectsCard() {
     const [showContent, setShowContent] = useState(false);
 
     return <motion.div
@@ -450,7 +450,7 @@ export function projectsCard() {
 
 }
 
-export function certificationsCard() {
+export function CertificationsCard() {
     const [showContent, setShowContent] = useState(false);
 
     return <motion.div
@@ -522,7 +522,7 @@ export function certificationsCard() {
     </motion.div>
 }
 
-export function contactCard() {
+export function ContactCard() {
     const [showContent, setShowContent] = useState(false);
 
     return <motion.div

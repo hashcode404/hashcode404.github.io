@@ -1,8 +1,50 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          setTimeout(() => setLoading(false), 500);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, []);
+  if (loading) {
+    const totalBars = 30;
+    const filledBars = Math.floor((progress / 100) * totalBars);
+    const emptyBars = totalBars - filledBars;
+
+    return (
+      <div className="fixed inset-0 bg-black text-green-500 flex items-center justify-center font-mono text-lg">
+        <div className="w-full max-w-xl px-4">
+          {/* <p className="mb-4 text-white">Loaded</p> */}
+          <p>
+            [
+            <span className="text-green-500">
+              {"#".repeat(filledBars)}
+            </span>
+            <span className="text-gray-700">
+              {"#".repeat(emptyBars)}
+            </span>
+            ] {progress.toFixed(1)}%
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <main className="relative min-h-screen flex items-center flex-col gap-15 justify-center bg-gray-950 text-white overflow-hidden">
 

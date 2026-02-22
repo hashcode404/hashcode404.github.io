@@ -4,6 +4,21 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Download, Github, Linkedin, Instagram, MapPin } from "lucide-react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+const trackEvent = (action: string, label: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", action, {
+      event_category: "engagement",
+      event_label: label,
+    });
+  }
+};
+
 export default function Home() {
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -404,6 +419,7 @@ export default function Home() {
         <p className="text-green-400 mb-2">$ contact --email</p>
         <a
           href="mailto:pranavps962@gmail.com"
+          onClick={() => trackEvent("click", "email")}
           className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
      hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
      hover:-translate-y-1 hover:scale-105 
@@ -417,6 +433,7 @@ export default function Home() {
         <a
           href="/Pranav P.pdf"
           download
+          onClick={() => trackEvent("download", "resume")}
           className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
      hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
      hover:-translate-y-1 hover:scale-105 
@@ -432,6 +449,7 @@ export default function Home() {
             href="https://github.com/hashcode404"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("click", "github")}
             className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
        hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
        hover:-translate-y-1 hover:scale-105 
@@ -445,6 +463,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/pranav-p-a882331b3/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("click", "linkedin")}
             className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
        hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
        hover:-translate-y-1 hover:scale-105 
@@ -458,6 +477,7 @@ export default function Home() {
             href="https://www.instagram.com/hashcode.404"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("click", "instagram")}
             className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
        hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
        hover:-translate-y-1 hover:scale-105 

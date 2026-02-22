@@ -245,8 +245,7 @@ export default function Home() {
         <p className="text-green-400 mb-4 mt-8">$ cat resume.pdf</p>
         <a
           href="/Pranav P.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          download
           className="inline-block px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
              hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
              hover:-translate-y-1 hover:scale-105 

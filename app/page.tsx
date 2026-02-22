@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Mail, Download, Github, Linkedin, Instagram, MapPin } from "lucide-react";
 
 export default function Home() {
   const [progress, setProgress] = useState(0);
@@ -73,7 +74,7 @@ export default function Home() {
         </h1>
 
         <p className="text-neutral-400 mt-2 mb-6">
-          Senior Software Developer
+          senior-software-developer
         </p>
 
         {/* skills */}
@@ -396,16 +397,19 @@ export default function Home() {
         </h2>
 
         <p className="text-green-400 mb-2">$ location --current</p>
-        <p className="text-neutral-300 mb-6">
-          Thiruvananthapuram, Kerala, India
-        </p>
+        <div className="flex items-center gap-2 text-neutral-300 mb-6">
+          <MapPin size={16} className="text-green-500" />
+          <span>Thiruvananthapuram, Kerala, India</span>
+        </div>
         <p className="text-green-400 mb-2">$ contact --email</p>
         <a
           href="mailto:pranavps962@gmail.com"
-          className="inline-block px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-             hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-             hover:-translate-y-1 hover:scale-105 
-             transition-all duration-300 ease-in-out"        >
+          className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+     hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+     hover:-translate-y-1 hover:scale-105 
+     transition-all duration-300 ease-in-out"
+        >
+          <Mail size={16} />
           pranavps962@gmail.com
         </a>
 
@@ -413,11 +417,12 @@ export default function Home() {
         <a
           href="/Pranav P.pdf"
           download
-          className="inline-block px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-             hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-             hover:-translate-y-1 hover:scale-105 
-             transition-all duration-300 ease-in-out"
+          className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+     hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+     hover:-translate-y-1 hover:scale-105 
+     transition-all duration-300 ease-in-out"
         >
+          <Download size={16} />
           Download Resume
         </a>
 
@@ -427,11 +432,12 @@ export default function Home() {
             href="https://github.com/hashcode404"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"
+            className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+       hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+       hover:-translate-y-1 hover:scale-105 
+       transition-all duration-300 ease-in-out"
           >
+            <Github size={16} />
             GitHub
           </a>
 
@@ -439,11 +445,12 @@ export default function Home() {
             href="https://www.linkedin.com/in/pranav-p-a882331b3/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"
+            className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+       hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+       hover:-translate-y-1 hover:scale-105 
+       transition-all duration-300 ease-in-out"
           >
+            <Linkedin size={16} />
             LinkedIn
           </a>
 
@@ -451,11 +458,12 @@ export default function Home() {
             href="https://www.instagram.com/hashcode.404"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
-               hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
-               hover:-translate-y-1 hover:scale-105 
-               transition-all duration-300 ease-in-out"
+            className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 bg-green-900/20 rounded-lg 
+       hover:bg-green-900/50 hover:shadow-lg hover:shadow-green-700/30 
+       hover:-translate-y-1 hover:scale-105 
+       transition-all duration-300 ease-in-out"
           >
+            <Instagram size={16} />
             Instagram
           </a>
         </div>

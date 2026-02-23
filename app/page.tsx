@@ -52,10 +52,10 @@ export default function Home() {
 
   return (
     <main className="relative bg-gray-950 text-white 
+    absolute inset-0 bg-[linear-gradient(rgba(150,150,150,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(150,150,150,0.1)_1px,transparent_1px)] bg-[size:30px_30px]
     h-screen overflow-y-scroll 
     snap-y snap-mandatory">
-      {/* GRID BACKGROUND */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(150,150,150,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(150,150,150,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
+
       {/* INTRO CARD */}
       <Section>
         <IntroCard />

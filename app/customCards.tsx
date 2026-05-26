@@ -588,7 +588,7 @@ export function ContactCard() {
 
             <p className="text-green-400 mb-4 mt-8">$ cat resume.pdf</p>
             <a
-                href="/Pranav P.pdf"
+                href="/Pranav_P.pdf"
                 download
                 onClick={() => trackEvent("download", "resume")}
                 className={terminalButtonStyles}

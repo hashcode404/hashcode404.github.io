@@ -91,14 +91,12 @@ export function IntroCard() {
                 </h1>
 
                 <p className="text-neutral-400 mt-2 mb-4">
-                    senior-software-developer
+                    release-engineer | mobile-app-developer
                 </p>
 
                 <p className="text-neutral-400 mt-2 mb-6">
-                    Flutter Developer with 3+ years of experience delivering
-                    production-ready applications for multi-vendor platforms and
-                    restaurant management systems. Specialized in scalable,
-                    offline-first architectures and real-time system design.
+                    Release Engineer with 3+ years of experience focused on the Flutter ecosystem and mobile application delivery. Skilled in building and managing automated CI/CD pipelines, optimizing multi-vendor app release processes, and creating reliable end-to-end deployment workflows from development to production.
+
                 </p>
             </motion.div>
         )}
@@ -253,7 +251,7 @@ export function SkillsCard() {
                 <div className="mt-8">
                     <p className="text-green-400 mb-3">$ ci-cd</p>
                     <div className="flex flex-wrap gap-3">
-                        {["GitHub Actions", "Fastlane"].map((item) => (
+                        {["GitHub Actions", "Fastlane", "Jenkins"].map((item) => (
                             <span
                                 key={item}
                                 className={terminalBadgeStyles}
@@ -293,8 +291,8 @@ export function ExperienceCard() {
             <div className="w-3 h-3 rounded-full bg-green-500" />
         </div>
 
-       
-            <div className="px-8 pb-8 overflow-y-auto flex-1">
+
+        <div className="px-8 pb-8 overflow-y-auto flex-1">
             <TerminalCommand
                 text="$ ls experience --all"
                 speed={60}
@@ -304,56 +302,73 @@ export function ExperienceCard() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
+
             >
 
-            {/* Company 1 */}
-            <div className="mb-10">
-                <h3 className="text-white text-lg font-semibold">
-                    senior-software-developer (flutter)
-                </h3>
-                <p className="text-neutral-400 text-sm mb-3">
-                    Ferns IT Solutions · Dec 2022 - Present · Kerala, India
-                </p>
+                <div className="mb-10">
+                    <h3 className="text-white text-lg font-semibold">
+                        release-engineer
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        Elixr Labs · May 2026 - Present · Kerala, India
+                    </p>
 
-                <ul className="text-neutral-300 text-sm space-y-2">
-                    <li>• Delivered 8+ production mobile apps serving 5,000+ users</li>
-                    <li>• Built multi-vendor food platform (100+ restaurants, 30% higher order completion)</li>
-                    <li>• Engineered offline POS system with 100% uptime during outages</li>
-                    <li>• Reduced API response time from 2.5s → 1.2s</li>
-                    <li>• Integrated Stripe, Google Maps API & Google Business Profile API</li>
-                </ul>
-            </div>
+                    {/* <ul className="text-neutral-300 text-sm space-y-2">
+                        <li>• Developed and maintained mobile applications for iOS and Android platforms.</li>
+                        <li>• Implemented CI/CD pipelines for automated testing and deployment.</li>
+                        <li>• Continuously improved application performance and user experience.</li>
+                        <li>• Optimized application performance and user experience.</li>
+                    </ul> */}
+                </div>
 
-            {/* Company 2 */}
-            <div className="mb-10">
-                <h3 className="text-white text-lg font-semibold">
-                    software-development-intern (flutter, kotlin)
-                </h3>
-                <p className="text-neutral-400 text-sm mb-3">
-                    RichkenMedia · Mar 2022 - Nov 2022
-                </p>
+                {/* Company 1 */}
+                <div className="mb-10">
+                    <h3 className="text-white text-lg font-semibold">
+                        senior-software-developer (flutter)
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        Ferns IT Solutions · Dec 2022 - May 2026 · Kerala, India
+                    </p>
 
-                <ul className="text-neutral-300 text-sm space-y-2">
-                    <li>• Worked on content streaming application</li>
-                    <li>• Applied DDD architecture & Bloc state management</li>
-                    <li>• Assisted in backend API integration & debugging</li>
-                </ul>
-            </div>
+                    <ul className="text-neutral-300 text-sm space-y-2">
+                        <li>• Delivered 8+ production mobile apps serving 5,000+ users</li>
+                        <li>• Built multi-vendor food platform (100+ restaurants, 30% higher order completion)</li>
+                        <li>• Engineered offline POS system with 100% uptime during outages</li>
+                        <li>• Reduced API response time from 2.5s → 1.2s</li>
+                        <li>• Integrated Stripe, Google Maps API & Google Business Profile API</li>
+                    </ul>
+                </div>
 
-            {/* Company 3 */}
-            <div>
-                <h3 className="text-white text-lg font-semibold">
-                    fullstack-development-intern (python)
-                </h3>
-                <p className="text-neutral-400 text-sm mb-3">
-                    Quest Innovative Solutions · Oct 2021 – Nov 2022
-                </p>
+                {/* Company 2 */}
+                <div className="mb-10">
+                    <h3 className="text-white text-lg font-semibold">
+                        software-development-intern (flutter, kotlin)
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        RichkenMedia · Mar 2022 - Nov 2022
+                    </p>
 
-                <ul className="text-neutral-300 text-sm space-y-2">
-                    <li>• Built full-stack web features using Python</li>
-                    <li>• Learned SDLC, version control & team collaboration</li>
-                </ul>
-            </div>
+                    <ul className="text-neutral-300 text-sm space-y-2">
+                        <li>• Worked on content streaming application</li>
+                        <li>• Applied DDD architecture & Bloc state management</li>
+                        <li>• Assisted in backend API integration & debugging</li>
+                    </ul>
+                </div>
+
+                {/* Company 3 */}
+                <div>
+                    <h3 className="text-white text-lg font-semibold">
+                        fullstack-development-intern (python)
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        Quest Innovative Solutions · Oct 2021 – Nov 2022
+                    </p>
+
+                    <ul className="text-neutral-300 text-sm space-y-2">
+                        <li>• Built full-stack web features using Python</li>
+                        <li>• Learned SDLC, version control & team collaboration</li>
+                    </ul>
+                </div>
             </motion.div>
             )}
         </div>
@@ -378,7 +393,7 @@ export function ProjectsCard() {
         </div>
 
         <div className="px-8 pb-8 overflow-y-auto flex-1">
-                <TerminalCommand
+            <TerminalCommand
                 text="$ ls projects --all"
                 speed={60}
                 onComplete={() => setTimeout(() => setShowContent(true), 400)}
@@ -387,62 +402,62 @@ export function ProjectsCard() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
-            > 
+            >
 
-            {/* Project 1 */}
-            <div className="mb-10">
-                <h3 className="text-white text-lg font-semibold mb-2">
-                    online-order-management-system
-                </h3>
+                {/* Project 1 */}
+                <div className="mb-10">
+                    <h3 className="text-white text-lg font-semibold mb-2">
+                        online-order-management-system
+                    </h3>
 
-                <p className="text-neutral-400 text-sm mb-3">
-                    Flutter · Firebase · REST API · GetX · Push Notifications
-                </p>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        Flutter · Firebase · REST API · GetX · Push Notifications
+                    </p>
 
-                <ul className="text-neutral-300 text-sm space-y-1">
-                    <li>• Centralized dashboard for managing website & app orders</li>
-                    <li>• Accept / Reject / Complete order workflow</li>
-                    <li>• Real-time alert system for new incoming orders</li>
-                    {/* <li>• Prevented missed orders through sound & push notifications</li> */}
-                    <li>• Reduced manual coordination between staff by 40%</li>
-                </ul>
-            </div>
+                    <ul className="text-neutral-300 text-sm space-y-1">
+                        <li>• Centralized dashboard for managing website & app orders</li>
+                        <li>• Accept / Reject / Complete order workflow</li>
+                        <li>• Real-time alert system for new incoming orders</li>
+                        {/* <li>• Prevented missed orders through sound & push notifications</li> */}
+                        <li>• Reduced manual coordination between staff by 40%</li>
+                    </ul>
+                </div>
 
-            {/* Project 2 */}
-            <div className="mb-10">
-                <h3 className="text-white text-lg font-semibold mb-2">
-                    multi-vendor-food-platform
-                </h3>
+                {/* Project 2 */}
+                <div className="mb-10">
+                    <h3 className="text-white text-lg font-semibold mb-2">
+                        multi-vendor-food-platform
+                    </h3>
 
-                <p className="text-neutral-400 text-sm mb-3">
-                    Flutter · Firebase · GetX · Stripe
-                </p>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        Flutter · Firebase · GetX · Stripe
+                    </p>
 
-                <ul className="text-neutral-300 text-sm space-y-1">
-                    <li>• 5,000+ active users</li>
-                    <li>• 99.9% Stripe transaction success</li>
-                    <li>• Real-time tracking & push notifications</li>
-                    <li>• 30% increase in order completion</li>
-                </ul>
-            </div>
+                    <ul className="text-neutral-300 text-sm space-y-1">
+                        <li>• 5,000+ active users</li>
+                        <li>• 99.9% Stripe transaction success</li>
+                        <li>• Real-time tracking & push notifications</li>
+                        <li>• 30% increase in order completion</li>
+                    </ul>
+                </div>
 
-            {/* Project 3 */}
-            <div>
-                <h3 className="text-white text-lg font-semibold mb-2">
-                    offline-pos-waiter-system
-                </h3>
+                {/* Project 3 */}
+                <div>
+                    <h3 className="text-white text-lg font-semibold mb-2">
+                        offline-pos-waiter-system
+                    </h3>
 
-                <p className="text-neutral-400 text-sm mb-3">
-                    Flutter · Hive · Local Networking
-                </p>
+                    <p className="text-neutral-400 text-sm mb-3">
+                        Flutter · Hive · Local Networking
+                    </p>
 
-                <ul className="text-neutral-300 text-sm space-y-1">
-                    <li>• Offline-first architecture</li>
-                    <li>• 100% uptime during outages</li>
-                    <li>• QR-based device pairing</li>
-                    <li>• Deployed across 10+ restaurants</li>
-                </ul>
-            </div>
+                    <ul className="text-neutral-300 text-sm space-y-1">
+                        <li>• Offline-first architecture</li>
+                        <li>• 100% uptime during outages</li>
+                        <li>• QR-based device pairing</li>
+                        <li>• Deployed across 10+ restaurants</li>
+                    </ul>
+                </div>
             </motion.div>
             )}
         </div>
@@ -468,57 +483,57 @@ export function CertificationsCard() {
         </div>
 
         <TerminalCommand
-                text="$ ls certifications --all"
-                speed={60}
-                onComplete={() => setTimeout(() => setShowContent(true), 400)}
-            />
-            {showContent && (<motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-            > 
+            text="$ ls certifications --all"
+            speed={60}
+            onComplete={() => setTimeout(() => setShowContent(true), 400)}
+        />
+        {showContent && (<motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+        >
 
-        <div className="space-y-8">
+            <div className="space-y-8">
 
-            {/* Cert 1 */}
-            <div>
-                <h3 className="text-white text-lg font-semibold mb-1">
-                    foundations-of-cybersecurity
-                </h3>
-                <p className="text-neutral-400 text-sm mb-2">
-                    Google · Issued Oct 2025
-                </p>
-                <a
-                    href="https://www.coursera.org/account/accomplishments/verify/VD8VV4BBPBWF"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-green-400 text-sm hover:underline mb-4"
-                >
-                    view-credential →
-                </a>
+                {/* Cert 1 */}
+                <div>
+                    <h3 className="text-white text-lg font-semibold mb-1">
+                        foundations-of-cybersecurity
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-2">
+                        Google · Issued Oct 2025
+                    </p>
+                    <a
+                        href="https://www.coursera.org/account/accomplishments/verify/VD8VV4BBPBWF"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-green-400 text-sm hover:underline mb-4"
+                    >
+                        view-credential →
+                    </a>
+                </div>
+
+                {/* Cert 2 */}
+                <div>
+                    <h3 className="text-white text-lg font-semibold mb-1 ">
+                        build-website-with-wordpress
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-2">
+                        Coursera Project Network · Issued Jul 2024
+                    </p>
+                    <a
+                        href="https://www.coursera.org/account/accomplishments/verify/VXHJCURTMUAC"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-green-400 text-sm hover:underline"
+                    >
+                        view-credential →
+                    </a>
+                </div>
+
             </div>
-
-            {/* Cert 2 */}
-            <div>
-                <h3 className="text-white text-lg font-semibold mb-1 ">
-                    build-website-with-wordpress
-                </h3>
-                <p className="text-neutral-400 text-sm mb-2">
-                    Coursera Project Network · Issued Jul 2024
-                </p>
-                <a
-                    href="https://www.coursera.org/account/accomplishments/verify/VXHJCURTMUAC"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-green-400 text-sm hover:underline"
-                >
-                    view-credential →
-                </a>
-            </div>
-
-        </div>
         </motion.div>
-            )}
+        )}
     </motion.div>
 }
 
@@ -541,83 +556,83 @@ export function ContactCard() {
 
         {/* contact info */}
         <TerminalCommand
-                text="$ contact --info"
-                speed={60}
-                onComplete={() => setTimeout(() => setShowContent(true), 400)}
-            />
-            {showContent && (<motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-            > 
-
-
-        <h2 className="text-3xl font-bold text-white mb-6">
-            Let's Connect
-        </h2>
-
-        <p className="text-green-400 mb-4">$ location --current</p>
-        <div className="flex items-center gap-2 text-neutral-300 mb-6">
-            <MapPin size={16} className="text-white-500" />
-            <span>Thiruvananthapuram, Kerala, India</span>
-        </div>
-        <p className="text-green-400 mb-4 mt-8">$ contact --email</p>
-        <a
-            href="mailto:pranavps962@gmail.com"
-            onClick={() => trackEvent("click", "email")}
-            className={terminalButtonStyles}
+            text="$ contact --info"
+            speed={60}
+            onComplete={() => setTimeout(() => setShowContent(true), 400)}
+        />
+        {showContent && (<motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
         >
-            <Mail size={16} />
-            pranavps962@gmail.com
-        </a>
 
-        <p className="text-green-400 mb-4 mt-8">$ cat resume.pdf</p>
-        <a
-            href="/Pranav P.pdf"
-            download
-            onClick={() => trackEvent("download", "resume")}
-            className={terminalButtonStyles}
-        >
-            <Download size={16} />
-            Download Resume
-        </a>
 
-        <p className="text-green-400 mb-4 mt-8">$ ls ./social-links</p>
-        <div className="flex flex-wrap gap-4">
+            <h2 className="text-3xl font-bold text-white mb-6">
+                Let's Connect
+            </h2>
+
+            <p className="text-green-400 mb-4">$ location --current</p>
+            <div className="flex items-center gap-2 text-neutral-300 mb-6">
+                <MapPin size={16} className="text-white-500" />
+                <span>Thiruvananthapuram, Kerala, India</span>
+            </div>
+            <p className="text-green-400 mb-4 mt-8">$ contact --email</p>
             <a
-                href="https://github.com/hashcode404"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("click", "github")}
+                href="mailto:pranavps962@gmail.com"
+                onClick={() => trackEvent("click", "email")}
                 className={terminalButtonStyles}
             >
-                <Github size={16} />
-                GitHub
+                <Mail size={16} />
+                pranavps962@gmail.com
             </a>
 
+            <p className="text-green-400 mb-4 mt-8">$ cat resume.pdf</p>
             <a
-                href="https://www.linkedin.com/in/pranav-p-a882331b3/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("click", "linkedin")}
+                href="/Pranav P.pdf"
+                download
+                onClick={() => trackEvent("download", "resume")}
                 className={terminalButtonStyles}
             >
-                <Linkedin size={16} />
-                LinkedIn
+                <Download size={16} />
+                Download Resume
             </a>
 
-            <a
-                href="https://www.instagram.com/hashcode.404"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("click", "instagram")}
-                className={terminalButtonStyles}
-            >
-                <Instagram size={16} />
-                Instagram
-            </a>
-        </div>
+            <p className="text-green-400 mb-4 mt-8">$ ls ./social-links</p>
+            <div className="flex flex-wrap gap-4">
+                <a
+                    href="https://github.com/hashcode404"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent("click", "github")}
+                    className={terminalButtonStyles}
+                >
+                    <Github size={16} />
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/pranav-p-a882331b3/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent("click", "linkedin")}
+                    className={terminalButtonStyles}
+                >
+                    <Linkedin size={16} />
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://www.instagram.com/hashcode.404"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent("click", "instagram")}
+                    className={terminalButtonStyles}
+                >
+                    <Instagram size={16} />
+                    Instagram
+                </a>
+            </div>
         </motion.div>
-            )}
+        )}
     </motion.div>
 }

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pranav | Flutter Developer",
+  title: "Pranav | Release Engineer",
   description: "Portfolio of Pranav P",
   icons: {
     icon: "/icon.svg",

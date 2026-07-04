@@ -233,7 +233,7 @@ export function SkillsCard() {
                 <div className="mt-8">
                     <p className="text-green-400 mb-3">$ version-control</p>
                     <div className="flex flex-wrap gap-3">
-                        {["Git", "GitHub"].map((item) => (
+                        {["Git", "GitHub", "Bitbucket"].map((item) => (
                             <span
                                 key={item}
                                 className={terminalBadgeStyles}
@@ -249,9 +249,9 @@ export function SkillsCard() {
 
                 {/* CI/CD */}
                 <div className="mt-8">
-                    <p className="text-green-400 mb-3">$ ci-cd</p>
+                    <p className="text-green-400 mb-3">$ ci-cd & release-management</p>
                     <div className="flex flex-wrap gap-3">
-                        {["GitHub Actions", "Fastlane", "Jenkins"].map((item) => (
+                        {["GitHub Actions", "Fastlane", "Jenkins", "Bamboo", "Firebase App Distribution", "Play Console", "App Store Connect"].map((item) => (
                             <span
                                 key={item}
                                 className={terminalBadgeStyles}
@@ -495,7 +495,25 @@ export function CertificationsCard() {
 
             <div className="space-y-8">
 
-                {/* Cert 1 */}
+            {/* Cert 1 */}
+                <div>
+                    <h3 className="text-white text-lg font-semibold mb-1">
+                        devops-foundations
+                    </h3>
+                    <p className="text-neutral-400 text-sm mb-2">
+                    LinkedIn · Issued Jun 2026
+                    </p>
+                    <a
+                        href="http://linkedin.com/learning-login/continue?forceAccount=false&authUUID=HU0bwus1QBW11juWfBs2ZQ%3D%3D&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcertificates%2Fb428060d9df6e24625f55818aa8022eefd2176e0726a4c3c7f0a9b9fa4610eab%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_profile_view_base%253BID012PloQQKvw9YtcMaxHg%253D%253D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-green-400 text-sm hover:underline mb-4"
+                    >
+                        view-credential →
+                    </a>
+                </div>
+
+                {/* Cert 2 */}
                 <div>
                     <h3 className="text-white text-lg font-semibold mb-1">
                         foundations-of-cybersecurity
@@ -513,7 +531,7 @@ export function CertificationsCard() {
                     </a>
                 </div>
 
-                {/* Cert 2 */}
+                {/* Cert 3 */}
                 <div>
                     <h3 className="text-white text-lg font-semibold mb-1 ">
                         build-website-with-wordpress

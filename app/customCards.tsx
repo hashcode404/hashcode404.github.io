@@ -91,11 +91,11 @@ export function IntroCard() {
                 </h1>
 
                 <p className="text-neutral-400 mt-2 mb-4">
-                    release-engineer | mobile-app-developer
+                    flutter-developer | release-engineer
                 </p>
 
                 <p className="text-neutral-400 mt-2 mb-6">
-                    Release Engineer with 3+ years of experience focused on the Flutter ecosystem and mobile application delivery. Skilled in building and managing automated CI/CD pipelines, optimizing multi-vendor app release processes, and creating reliable end-to-end deployment workflows from development to production.
+                    Flutter Developer and Release Engineer with nearly 4 years of experience in mobile application development, CI/CD workflows, release management, and deployment automation. Strong expertise in Flutter, build pipelines, version control, Firebase, app publishing, and performance optimization. Experienced in delivering scalable, production-ready applications while collaborating across development and operations teams to ensure stable, efficient software releases.
 
                 </p>
             </motion.div>
@@ -313,12 +313,20 @@ export function ExperienceCard() {
                         Elixr Labs · May 2026 - Present · Kerala, India
                     </p>
 
-                    {/* <ul className="text-neutral-300 text-sm space-y-2">
-                        <li>• Developed and maintained mobile applications for iOS and Android platforms.</li>
-                        <li>• Implemented CI/CD pipelines for automated testing and deployment.</li>
-                        <li>• Continuously improved application performance and user experience.</li>
-                        <li>• Optimized application performance and user experience.</li>
-                    </ul> */}
+                    <ul className="text-neutral-300 text-sm space-y-2">
+                        <li>• Managed end-to-end mobile application release lifecycle for Android and iOS, ensuring stable and production-ready
+                            deployments.</li>
+                        <li>• Designed, maintained, and optimized CI/CD pipelines using Bamboo, GitHub Actions, and Fastlane to automate
+                            build, code signing, testing, and deployment workflows.</li>
+                        <li>• Automated application versioning, build configuration, and release processes, improving deployment consistency
+                            and reducing manual effort.</li>
+                        <li>• Managed Firebase App Distribution, Firebase Crashlytics, Google Play Console, and App Store Connect for beta
+                            testing, monitoring, and production releases.</li>
+                        <li>• Collaborated with development, QA, and product teams to coordinate release schedules, troubleshoot build failures,
+and ensure release readiness.</li>
+                        <li>• Monitored release health, analyzed deployment issues, and continuously improved CI/CD workflows to enhance
+release reliability and developer productivity.</li>
+                    </ul>
                 </div>
 
                 {/* Company 1 */}
@@ -495,13 +503,13 @@ export function CertificationsCard() {
 
             <div className="space-y-8">
 
-            {/* Cert 1 */}
+                {/* Cert 1 */}
                 <div>
                     <h3 className="text-white text-lg font-semibold mb-1">
                         devops-foundations
                     </h3>
                     <p className="text-neutral-400 text-sm mb-2">
-                    LinkedIn · Issued Jun 2026
+                        LinkedIn · Issued Jun 2026
                     </p>
                     <a
                         href="http://linkedin.com/learning-login/continue?forceAccount=false&authUUID=HU0bwus1QBW11juWfBs2ZQ%3D%3D&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcertificates%2Fb428060d9df6e24625f55818aa8022eefd2176e0726a4c3c7f0a9b9fa4610eab%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_profile_view_base%253BID012PloQQKvw9YtcMaxHg%253D%253D"

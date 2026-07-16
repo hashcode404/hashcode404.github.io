@@ -175,6 +175,23 @@ export function SkillsCard() {
                         ))}
                     </div>
                 </div>
+                {/* UI/UX */}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ ui-ux</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["Figma", "Adobe XD", "Material Design", "Cupertino Design"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
 
                 {/* STATE MANAGEMENT */}
                 <div className="mt-8">
@@ -216,6 +233,23 @@ export function SkillsCard() {
                     <p className="text-green-400 mb-3">$ integrations</p>
                     <div className="flex flex-wrap gap-3">
                         {["REST APIs", "Firebase", "Stripe", "In-App Purchases", "Google Maps API", "Google Business Profile API", "Push Notifications"].map((item) => (
+                            <span
+                                key={item}
+                                className={terminalBadgeStyles}
+                            >
+                                <span className="text-green-400 mr-2">
+                                    &gt;_
+                                </span>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+                {/* AI & Productivity*/}
+                <div className="mt-8">
+                    <p className="text-green-400 mb-3">$ ai & productivity</p>
+                    <div className="flex flex-wrap gap-3">
+                        {["ChatGPT", "GitHub Copilot", "Claude AI", "Google Gemini", "Cursor AI"].map((item) => (
                             <span
                                 key={item}
                                 className={terminalBadgeStyles}
@@ -323,9 +357,9 @@ export function ExperienceCard() {
                         <li>• Managed Firebase App Distribution, Firebase Crashlytics, Google Play Console, and App Store Connect for beta
                             testing, monitoring, and production releases.</li>
                         <li>• Collaborated with development, QA, and product teams to coordinate release schedules, troubleshoot build failures,
-and ensure release readiness.</li>
+                            and ensure release readiness.</li>
                         <li>• Monitored release health, analyzed deployment issues, and continuously improved CI/CD workflows to enhance
-release reliability and developer productivity.</li>
+                            release reliability and developer productivity.</li>
                     </ul>
                 </div>
 
